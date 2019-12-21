@@ -1,0 +1,74 @@
+% ---------------------------------------------------------------------------- %
+% Setup
+% ---------------------------------------------------------------------------- %
+
+ % Dokumentmetadaten
+\title{\haupttitel }
+\author{\verfasser}
+\date{\today}
+
+
+%Kopf- und Fußzeile
+\pagestyle {fancy}
+
+\fancyhead[L]{\fontsize{10pt}{12pt}\selectfont\verfasser}
+\fancyhead[C]{}
+\fancyhead[R]{}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+
+% ---------------------------------------------------------------------------- %
+% Anfang des Dokuments
+% ---------------------------------------------------------------------------- %
+
+\begin{document}
+
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\begin{center}
+    \LARGE
+    \vspace{4cm}
+    
+    {\huge\bfseries \haupttitel \par}
+	\vspace{1cm}
+	{\bfseries \untertitel \par}
+
+\end{center}
+
+\vspace*{\fill}
+
+\begin{tabbing}
+
+	Verfasser\verfassergen :  
+	\hspace{2.5cm}  \= \verfasser \\
+	\> \strasse \\
+	\> \ort \\
+	\> Tel.: \tel \\
+	\> e-Mail: \mail \\
+	 \\
+
+	Referent\referentgen :
+	\> \referent \\
+	\\
+	
+	Korreferent\korreferentgen :
+	\> \korreferent \\
+	\\
+	
+	Modul:
+	\> \modul \\
+	\\
+\end{tabbing}
+
+\ \\
+\centerline{\textbf{\titlefooter}}
+
+
+
+    \newpage
+    
+     \pagestyle{fancy}
+\pagenumbering{roman}

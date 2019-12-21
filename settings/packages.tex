@@ -1,0 +1,62 @@
+% ---------------------------------------------------------------------------- %
+% Packages
+% ---------------------------------------------------------------------------- %
+
+% Eingabekodierung
+\usepackage[utf8]{inputenc}
+
+% Sprache (Deutsch, Neue Rechtschreibung)
+\usepackage[ngerman]{babel}
+
+% APA Zitierstil
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite} 
+
+\usepackage{ 
+	graphicx, 			% ermöglicht das Einbinden von Bildern
+	amsmath,			% standard Mathe-Paket
+	amssymb,			% ergänzt mathematische Symbole
+	paralist,			% Erweiterung der bereits bestehenden Listenumgebungen
+	listings,				% Code-Formatierung 
+	setspace,			% Zeilenabstand
+	geometry,			% Seitenformatierung
+	fancyhdr,			% Manipulation von Fuss- und Kopfzeilen
+	courier,				% Monospace Schrift
+	mathptmx,		% Times New Roman für Lauftext und Überschriften
+	xcolor				% erlaubt das Definieren neuer Farben
+}
+
+% Layoutanpassungen
+% @link http://mirror.easyname.at/ctan/macros/latex/contrib/geometry/geometry.pdf
+\geometry{
+	a4paper,				% Format (überschreibt documentclass)
+	twoside,				% für einseitigen Druck oneside verwenden
+	footskip=10mm,	% Position Fusszeile (Abstand zum Text)
+	headsep=10mm,	% Position Fusszeile (Abstand zum Text)
+	top=25mm,
+	right=25mm,
+	bottom=20mm,
+	left=30mm
+}
+
+% Mikrotypografie
+\usepackage[
+	activate={true,nocompatibility},
+	final,
+	tracking=true,
+	kerning=true,
+	spacing=true,
+	factor=1100,
+	stretch=10,
+	shrink=10
+]{microtype}
+
+\addtokomafont{disposition}{\rmfamily}
+
+\usepackage[T1] {fontenc}		% Umlaute, Akzente,...
+\setstretch{\zab}						% Setzt den Zeilenabstand
+\setlength{\parindent}{7mm} 	% Setzt den Absatzeinzug
+
+% Anführungszeichen
+% @link https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Anf%C3%BChrungszeichen
+\usepackage[autostyle=true, german=swiss]{csquotes}

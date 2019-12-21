@@ -1,0 +1,37 @@
+% ---------------------------------------------------------------------------- %
+% Dokumenteinstellungen
+% ---------------------------------------------------------------------------- %
+
+% Dokumentklasse
+\documentclass[a4paper, 12pt, ngerman]{scrartcl}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+% Load settings
+\include{settings/macros}
+\include{settings/packages}
+\include{settings/setup}
+
+% Abstract
+\include{content/abstract}
+
+% Vorwort
+\include{content/vorwort}
+
+% Inhaltsverzeichnis
+\tableofcontents
+
+% Einleitung
+\include{content/einleitung}
+
+% Hauptteil
+\include{content/hauptteil}
+
+
+\newpage
+\pagenumbering{arabic}
+
+
+\bibliography{bibliography}
+
+\end{document}
