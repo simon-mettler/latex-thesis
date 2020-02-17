@@ -2,7 +2,7 @@
 % Setup
 % ---------------------------------------------------------------------------- %
 
- % Dokumentmetadaten
+% Dokumentmetadaten
 \title{\haupttitel }
 \author{\verfasser}
 \date{\today}
@@ -19,19 +19,19 @@
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage}
 
-% ---------------------------------------------------------------------------- %
-% Anfang des Dokuments
-% ---------------------------------------------------------------------------- %
 
-\begin{document}
+% ---------------------------------------------------------------------------- %
+% Formatierung Titelseite (Inhalt unter macros.tex anpassen)
+% ---------------------------------------------------------------------------- %
 
 \pagestyle{empty}
 
+% Titel und Untertitel
 \begin{center}
-    \LARGE
-    \vspace{4cm}
-    
-    {\huge\bfseries \haupttitel \par}
+
+	\LARGE	\vspace{4cm}
+	{\huge\bfseries \haupttitel \par}
+	
 	\vspace{1cm}
 	{\bfseries \untertitel \par}
 
@@ -39,35 +39,34 @@
 
 \vspace*{\fill}
 
+% Angaben zu Verfasser, Referent, ...
 \begin{tabbing}
 
-	Verfasser\verfassergen :  
-	\hspace{2.5cm}  \= \verfasser \\
+	\verfassergen \hspace{2.5cm} \= \verfasser \\
 	\> \strasse \\
 	\> \ort \\
-	\> Tel.: \tel \\
-	\> e-Mail: \mail \\
+	\> \telgen \tel \\
+	\> \mailgen \mail \\
 	 \\
 
-	Referent\referentgen :
+	\referentgen 
 	\> \referent \\
 	\\
 	
-	Korreferent\korreferentgen :
+	\korreferentgen
 	\> \korreferent \\
 	\\
 	
-	Modul:
+	\modulgen
 	\> \modul \\
 	\\
+	
 \end{tabbing}
 
 \ \\
 \centerline{\textbf{\titlefooter}}
 
-
-
-    \newpage
-    
-     \pagestyle{fancy}
+% Seitenumbruch
+\newpage
+\pagestyle{fancy}
 \pagenumbering{roman}
