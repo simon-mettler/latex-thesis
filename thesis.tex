@@ -5,13 +5,38 @@
 % Dokumentklasse
 \documentclass[a4paper, 12pt, ngerman]{scrartcl}
 
-\usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage}
-
 % Load settings
-\include{settings/macros}
-\include{settings/packages}
+\input{settings/macros}
+\input{settings/packages}
+
+% Biblatex Settings (APA-Deutsch)
+\usepackage[style=apa]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+
+% Bibliografie laden
+\addbibresource{bibliography.bib}
+
+
+% ---------------------------------------------------------------------------- %
+% Beginn Dokument
+% ---------------------------------------------------------------------------- %
+
+\begin{document}
+
+% Titelseite laden
+\include{settings/titelseite}
+
+% laden
 \include{settings/setup}
+
+
+% ---------------------------------------------------------------------------- %
+% Inhalt
+% ---------------------------------------------------------------------------- %
+
+\pagenumbering{roman}
+
+% Nicht verwendete können auskommentiert werden.
 
 % Abstract
 \include{content/abstract}
@@ -21,6 +46,8 @@
 
 % Inhaltsverzeichnis
 \tableofcontents
+\newpage
+
 \pagenumbering{arabic}
 
 % Einleitung
@@ -29,11 +56,35 @@
 % Hauptteil
 \include{content/hauptteil}
 
+
+% ---------------------------------------------------------------------------- %
+% Bibliografie
+% ---------------------------------------------------------------------------- %
+
+\pagenumbering{roman}
+
+% Standardschrift für URL im Literaturverzeichnis
+\urlstyle{same}
+
+% Bibliografie
+\phantomsection
+\addcontentsline{toc}{section}{Literaturverzeichnis} 
+\printbibliography[title=Literaturverzeichnis]
 \newpage
 
-\pagenumbering{gobble}
-\bibliographystyle{apacite} 
 
-\bibliography{bibliography}
+% ---------------------------------------------------------------------------- %
+% Anhang
+% ---------------------------------------------------------------------------- %
+
+% Abkürzungsverzeichnis
+\include{content/abkverzeichnis}
+
+% Abbildungsverzeichnis
+\listoffigures
+
+% Eidesstattliche Erklärung
+\include{content/eidesstattlich}
+
 
 \end{document}

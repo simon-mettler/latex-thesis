@@ -8,30 +8,31 @@
 % Sprache (Deutsch, Neue Rechtschreibung)
 \usepackage[ngerman]{babel}
 
-% APA Zitierstil
-\usepackage[natbibapa]{apacite}
+\usepackage{titlesec}
+
+% Dient zur Auszeichnung und erstellung von Hyperlinks
+\usepackage{url}
 
 \usepackage{ 
-	graphicx, 			% ermöglicht das Einbinden von Bildern
-	amsmath,			% standard Mathe-Paket
-	amssymb,			% ergänzt mathematische Symbole
-	paralist,			% Erweiterung der bereits bestehenden Listenumgebungen
-	listings,				% Code-Formatierung 
-	setspace,			% Zeilenabstand
-	geometry,			% Seitenformatierung
-	fancyhdr,			% Manipulation von Fuss- und Kopfzeilen
-	courier,				% Monospace Schrift
-	mathptmx,		% Times New Roman für Lauftext und Überschriften
-	xcolor				% erlaubt das Definieren neuer Farben
+	graphicx, 	% ermöglicht das Einbinden von Bildern
+	amsmath,		% standard Mathe-Paket
+	amsfonts,	% ergänzt mathematische Symbole
+	paralist,	% Erweiterung der bereits bestehenden Listenumgebungen
+	listings,	% Code-Formatierung 
+	setspace,	% Zeilenabstand
+	geometry,	% Seitenformatierung
+	fancyhdr,	% Manipulation von Fuss- und Kopfzeilen
+	courier,		% Monospace Schrift
+	mathptmx,	% Times New Roman für Lauftext und Überschriften
+	xcolor		% erlaubt das Definieren neuer Farben
 }
 
-% Layoutanpassungen
-% @link http://mirror.easyname.at/ctan/macros/latex/contrib/geometry/geometry.pdf
+% Layoutanpassungen 
 \geometry{
-	a4paper,				% Format (überschreibt documentclass)
-	twoside,				% für einseitigen Druck oneside verwenden
+	a4paper,			% Format (überschreibt documentclass)
+%	twoside,			% für doppelseitigen Druck verwenden
 	footskip=10mm,	% Position Fusszeile (Abstand zum Text)
-	headsep=10mm,	% Position Fusszeile (Abstand zum Text)
+	headsep=10mm,	% Position Kopfzeile (Abstand zum Text)
 	top=25mm,
 	right=25mm,
 	bottom=20mm,
@@ -52,10 +53,16 @@
 
 \addtokomafont{disposition}{\rmfamily}
 
-\usepackage[T1] {fontenc}		% Umlaute, Akzente,...
-\setstretch{\zab}						% Setzt den Zeilenabstand
-\setlength{\parindent}{7mm} 	% Setzt den Absatzeinzug
+\usepackage[T1]{fontenc}			% Umlaute, Akzente,...
+\setstretch{\zab}				% Setzt den Zeilenabstand
+\setlength{\parindent}{\abs} 	% Setzt den Absatzeinzug
 
 % Anführungszeichen
-% @link https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Anf%C3%BChrungszeichen
 \usepackage[autostyle=true, german=swiss]{csquotes}
+
+% Gepunktete Linien auch bei Subsections im Inhaltsverzeichnis:
+% \usepackage{tocstyle}
+% \newtocstyle[KOMAlike][leaders]{alldotted}{}
+% \usetocstyle{alldotted}
+
+\usepackage[]{hyperref}
