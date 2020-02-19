@@ -38,6 +38,5 @@ Bilder mit Latex einbinden: [pdf](http://tug.ctan.org/info/l2picfaq/german/l2pic
 - [microtype](https://ctan.org/pkg/microtype)
 - [paralist](https://ctan.org/pkg/paralist)
 - [setspace](https://ctan.org/pkg/setspace)
-- [titlesec](https://ctan.org/pkg/titlesec)
 - [url](https://ctan.org/pkg/url)
 - [xcolor](https://ctan.org/pkg/xcolor)
