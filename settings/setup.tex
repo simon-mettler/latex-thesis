@@ -3,11 +3,17 @@
 % ---------------------------------------------------------------------------- %
 
 % Dokumentmetadaten
-\title{\haupttitel }
+\title{\haupttitel}
 \author{\verfasser}
 \date{\today}
 
-%Kopf- und Fußzeile
+% Setzt den Zeilenabstand
+\setstretch{\zab}
+
+% ---------------------------------------------------------------------------- %
+% Kopf- und Fußzeile
+% ---------------------------------------------------------------------------- %
+
 \fancyhead[L]{\fontsize{10pt}{12pt}\selectfont\verfasser}
 \fancyhead[C]{}
 \fancyhead[R]{}
@@ -17,5 +23,59 @@
 \fancyfoot[R]{\thepage}
 
 
-\let\stdsection\section
-\renewcommand\section{\newpage\stdsection}
+% ---------------------------------------------------------------------------- %
+% Formatierung Titelseite
+% ---------------------------------------------------------------------------- %
+
+% Nicht verwendete Angaben können hier auskommentiert werden.
+
+\pagestyle{empty}
+
+% Titel und Untertitel
+\begin{center}
+
+	\vspace{4cm}
+	{\huge\bfseries \haupttitel \par}
+	
+	\vspace{1cm}
+	{\large\bfseries \untertitel \par}
+
+\end{center}
+
+\vspace*{\fill}
+
+% Angaben zu Verfasser, Referent, ...
+\begin{tabbing}
+
+	\verfassergen \hspace{2.5cm} \= \verfasser \\
+	\> \strasse \\
+	\> \ort \\
+	\> \telgen \tel \\
+	\> \mailgen \mail \\
+	\\
+
+	\referentgen 
+	\> \referent \\
+	
+	\korreferentgen
+	\> \korreferent \\
+	
+	\modulgen
+	\> \modul \\
+	\\
+	
+	\bearbzeitgen
+	\> \bearbzeit
+	
+	
+\end{tabbing}
+
+\ \\
+\centerline{\textbf{\titlefooter}}
+
+% Seitenumbruch
+\newpage
+
+\pagestyle{fancy}
+
+\pagenumbering{roman}
