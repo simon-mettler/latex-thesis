@@ -6,7 +6,7 @@ Minimalbeispiel: [thesis.pdf](https://github.com/simon-mettler/latex-thesis/blob
 ## Voraussetzungen 
 LaTeX Installation, siehe [latex-project.org](https://www.latex-project.org/get/)
 
-Das Projekt verwendet BibLaTeX, beim Compiler ist daher ein Wechsel von `bibtex` zu `biber` nötig, siehe [Anleitung](https://tex.stackexchange.com/a/44095)
+Das Projekt verwendet BibLaTeX, daher ist ein Wechsel von `bibtex` zu `biber` nötig, siehe [Anleitung](https://tex.stackexchange.com/a/44095)
 
 ## Nützliches
 Empfohlener Editor: [Texmaker](https://www.xm1math.net/texmaker/) _(Linux, macOS, Windows)_
