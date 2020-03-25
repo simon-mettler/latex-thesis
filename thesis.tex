@@ -56,6 +56,20 @@
 \tableofcontents
 \newpage
 
+
+% Abbildungsverzeichnis
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis} 
+\listoffigures
+
+% Abkürzungsverzeichnis
+\include{content/abkverzeichnis}
+
+
+% ---------------------------------------------------------------------------- %
+% Einleitung und Hauptteil
+% ---------------------------------------------------------------------------- %
+
 \pagenumbering{arabic}
 
 % Einleitung
@@ -84,14 +98,6 @@
 % ---------------------------------------------------------------------------- %
 % Anhang
 % ---------------------------------------------------------------------------- %
-
-% Abkürzungsverzeichnis
-\include{content/abkverzeichnis}
-
-% Abbildungsverzeichnis
-\phantomsection
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\listoffigures
 
 % Eidesstattliche Erklärung
 \include{content/eidesstattlich}

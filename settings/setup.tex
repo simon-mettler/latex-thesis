@@ -13,6 +13,10 @@
 % Setzt den Absatzeinzug
 \setlength\parindent{\abs}
 
+% Seitenumbruch für neue Section
+\let\stdsection\section
+\renewcommand\section{\clearpage\stdsection}
+
 % ---------------------------------------------------------------------------- %
 % Kopf- und Fußzeile
 % ---------------------------------------------------------------------------- %
