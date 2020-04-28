@@ -23,19 +23,18 @@
 \usepackage[style=apa]{biblatex}
 \DeclareLanguageMapping{ngerman}{ngerman-apa}
 
-% Fügt "Verfügbar unter" und optional "Letzter Zugriff" zu online 
-% verfügbaren Quellen hinzu. 
-\DeclareFieldFormat{formaturl}{Verfügbar unter#1}
-\DeclareFieldFormat{urldate}{Letzter Zugriff #1}
+% Fügt im Literaturverzeichnis "Verfügbar unter" und optional "Letzter Zugriff" 
+% zu .bib entries mit url und urldate hinzu.
+\DeclareFieldFormat{formaturl}{Verfügbar unter #1}
+\DeclareFieldFormat{formatdate}{Letzter Zugriff: #1}
 
-\newbibmacro*{url+urldate}{
-	\printtext[formaturl]{
-		\printfield{url}
-	}\nopunct
-	\iffieldundef{urlyear}{}
-    {
-		\printtext[urldate]{\printurldate}
-    }
+\newbibmacro*{url+urldate}{%
+	\iffieldundef{urlyear}{%
+		\printtext[formaturl]{\printfield{url}}\nopunct%
+	}{%
+		\printtext[formaturl]{\printfield{url}}\adddot\space%
+		\printtext[formatdate]{\printurldate}%
+	}%
 }
 
 % Bibliografie laden
