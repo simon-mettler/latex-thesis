@@ -14,9 +14,9 @@
 \usepackage{url}
 
 \usepackage{ 
-	graphicx, 	% ermöglicht das Einbinden von Bildern
-	amsmath,		% standard Mathe-Paket
-	amsfonts,	% ergänzt mathematische Symbole
+	graphicx, 	% Ermöglicht das Einbinden von Bildern
+	amsmath,		% Standard Mathe-Paket
+	amsfonts,	% Ergänzt mathematische Symbole
 	paralist,	% Erweiterung der bereits bestehenden Listenumgebungen
 	listings,	% Code-Formatierung 
 	setspace,	% Zeilenabstand
@@ -24,8 +24,12 @@
 	fancyhdr,	% Manipulation von Fuss- und Kopfzeilen
 	courier,		% Monospace Schrift
 	mathptmx,	% Times New Roman für Lauftext und Überschriften
-	xcolor		% erlaubt das Definieren neuer Farben
+	xcolor		% Erlaubt das Definieren neuer Farben
 }
+
+% Bildunterschriften fromatieren
+\usepackage[bf]{caption}
+\captionsetup{format=plain}
 
 % Layoutanpassungen 
 \geometry{
@@ -61,3 +65,18 @@
 
 % Erweiterter Hyperlink Support
 \usepackage[hidelinks]{hyperref}
+
+
+% ---------------------------------------------------------------------------- %
+% Optionale Packages
+% ---------------------------------------------------------------------------- %
+
+% Ermöglicht das Einfügen von Notizen mittels \todo{}
+\reversemarginpar % Notizen links anzeigen
+\setlength{\marginparwidth}{2.2cm}
+\usepackage[backgroundcolor=white,linecolor=black,textsize=small]{todonotes}
+\makeatletter
+\renewcommand{\todo}[2][]{%
+    \@todo[tickmarkheight=0.2cm,caption={#2}, #1]{\begin{spacing}{0.6}#2\end{spacing}}%
+} 
+\makeatother 
