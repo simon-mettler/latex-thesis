@@ -22,24 +22,6 @@
 \input{settings/macros}
 \input{settings/packages}
 
-% Biblatex Settings (APA-Deutsch)
-\usepackage[style=apa]{biblatex}
-\DeclareLanguageMapping{ngerman}{ngerman-apa}
-
-% Fügt im Literaturverzeichnis "Verfügbar unter" und optional "Letzter Zugriff" 
-% zu .bib entries mit url und urldate hinzu.
-\DeclareFieldFormat{formaturl}{Verfügbar unter #1}
-\DeclareFieldFormat{formatdate}{Letzter Zugriff: #1}
-
-\newbibmacro*{url+urldate}{%
-	\iffieldundef{urlyear}{%
-		\printtext[formaturl]{\printfield{url}}\nopunct%
-	}{%
-		\printtext[formaturl]{\printfield{url}}\adddot\space%
-		\printtext[formatdate]{\printurldate}%
-	}%
-}
-
 % Bibliografie laden
 \addbibresource{bibliography.bib}
 

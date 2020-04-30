@@ -10,6 +10,10 @@
 
 % \usepackage{titlesec}
 
+% Biblatex Settings (APA-Deutsch)
+\usepackage[style=apa, autolang=other]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+
 % Dient zur Auszeichnung und erstellung von Hyperlinks
 \usepackage{url}
 
@@ -68,7 +72,7 @@
 
 
 % ---------------------------------------------------------------------------- %
-% Optionale Packages
+% Optionale Packages und Einstellungen
 % ---------------------------------------------------------------------------- %
 
 % Ermöglicht das Einfügen von Notizen mittels \todo{}
@@ -80,3 +84,20 @@
     \@todo[tickmarkheight=0.2cm,caption={#2}, #1]{\begin{spacing}{0.6}#2\end{spacing}}%
 } 
 \makeatother 
+
+% Fügt im Literaturverzeichnis "Verfügbar unter" und optional "Letzter Zugriff" 
+% zu .bib entries mit url und urldate hinzu.
+\DeclareFieldFormat{formaturl}{Verfügbar unter #1}
+\DeclareFieldFormat{formatdate}{Letzter Zugriff: #1}
+
+\newbibmacro*{url+urldate}{%
+	\iffieldundef{urlyear}{%
+		\printtext[formaturl]{\printfield{url}}\nopunct%
+	}{%
+		\printtext[formaturl]{\printfield{url}}\adddot\space%
+		\printtext[formatdate]{\printurldate}%
+	}%
+}
+
+% Ergänzt im Literaturverzeichnis den Publisher mit Ort (Ort, Herausgeber)
+\DeclareListFormat{publisher}{\printlist{location}\addcomma\space #1}
