@@ -1,15 +1,16 @@
 # LaTeX Vorlage Studium
 LaTeX-Vorlage für Exposé, Studienarbeit, Thesis, ...
 
+Entspricht (unter Vorbehalt) dem "Leitfaden Zitieren" der Fachhochschule Graubünden und den Richtlinien der DGP 4. Aufl. 2016
+
 Minimalbeispiel: [thesis.pdf](https://github.com/simon-mettler/latex-thesis/blob/master/thesis.pdf)
 
 ## Voraussetzungen 
 LaTeX Installation, siehe [latex-project.org](https://www.latex-project.org/get/)
 
-Das Projekt verwendet BibLaTeX, daher ist ein Wechsel von `bibtex` zu `biber` nötig, siehe [Anleitung](https://tex.stackexchange.com/a/44095)
-
 ## Nützliches
-Empfohlener Editor: [Texmaker](https://www.xm1math.net/texmaker/) _(Linux, macOS, Windows)_
+Empfohlener Editor: [Texmaker](https://www.xm1math.net/texmaker/) _(Linux, macOS, Windows)_ <br>
+> Die Vorlage verwendet BibLaTeX, daher ist ein Wechsel von* `bibtex` zu `biber` nötig, siehe [Anleitung](https://tex.stackexchange.com/a/44095)
 
 LaTeX2 Cheatsheet: [pdf](https://wch.github.io/latexsheet/latexsheet-a4.pdf)
 
@@ -25,6 +26,7 @@ Bilder mit LaTeX einbinden: [pdf](http://tug.ctan.org/info/l2picfaq/german/l2pic
 - [amsmath](https://ctan.org/pkg/amsmath)
 - [babel](https://ctan.org/pkg/babel)
 - [biblatex](https://ctan.org/pkg/biblatex)
+- [caption](https://ctan.org/pkg/caption)
 - [courier](https://ctan.org/pkg/courier)
 - [csquotes](https://ctan.org/pkg/csquotes)
 - [fancyhdr](https://ctan.org/pkg/fancyhdr)
@@ -38,5 +40,6 @@ Bilder mit LaTeX einbinden: [pdf](http://tug.ctan.org/info/l2picfaq/german/l2pic
 - [microtype](https://ctan.org/pkg/microtype)
 - [paralist](https://ctan.org/pkg/paralist)
 - [setspace](https://ctan.org/pkg/setspace)
+- [todonotes](https://ctan.org/pkg/todonotes)
 - [url](https://ctan.org/pkg/url)
 - [xcolor](https://ctan.org/pkg/xcolor)
