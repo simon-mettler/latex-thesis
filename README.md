@@ -10,7 +10,7 @@ LaTeX Installation, siehe [latex-project.org](https://www.latex-project.org/get/
 
 ## Nützliches
 Empfohlener Editor: [Texmaker](https://www.xm1math.net/texmaker/) _(Linux, macOS, Windows)_ <br>
-> Die Vorlage verwendet BibLaTeX, daher ist ein Wechsel von* `bibtex` zu `biber` nötig, siehe [Anleitung](https://tex.stackexchange.com/a/44095)
+> Die Vorlage verwendet BibLaTeX, daher ist ein Wechsel von `bibtex` zu `biber` nötig, siehe [Anleitung](https://texwelt.de/fragen/1909/wie-verwende-ich-biber-in-meinem-editor)
 
 LaTeX2 Cheatsheet: [pdf](https://wch.github.io/latexsheet/latexsheet-a4.pdf)
 
