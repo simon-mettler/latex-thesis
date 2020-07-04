@@ -3,7 +3,7 @@ LaTeX-Vorlage für Exposé, Studienarbeit, Thesis, ...
 
 Entspricht (unter Vorbehalt) dem "Leitfaden Zitieren" der Fachhochschule Graubünden und den Richtlinien der DGP 4. Aufl. 2016
 
-Minimalbeispiel: [thesis.pdf](https://github.com/simon-mettler/latex-thesis/blob/master/thesis.pdf)
+Minimalbeispiel: [thesis.pdf](https://github.com/simon-mettler/latex-thesis/blob/main/thesis.pdf)
 
 ## Voraussetzungen 
 LaTeX Installation, siehe [latex-project.org](https://www.latex-project.org/get/)
